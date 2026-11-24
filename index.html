@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Tejeel Innovations LLP robotics learning portal: electronics, mechanics, Arduino, ESP32, projects and interactive laboratories." name="description"/><title>Tejeel Robotics Academy | Stages 1 &amp; 2</title><link href="style.css" rel="stylesheet"/></head><body><header class="top"><button aria-expanded="false" aria-label="Open course navigation" class="mobileMenu" id="menu">☰</button><div class="brand">TEJEEL INNOVATIONS LLP<small>ROBOTICS ACADEMY</small></div><div class="spacer"></div><input aria-label="Search course" id="search" placeholder="Search course…" type="search"/><button id="theme">Dark</button><button id="print">Print</button></header><div class="shell"><aside><h2>Course contents</h2><nav aria-label="Course contents"><a class="" href="#section-2">Study pathway</a><a class="stage" href="#stage-1">Stage 1 — Robotics Explorer</a><a class="" href="#chapter-1">Chapter 1. Introduction to robotics and technology</a><a class="" href="#chapter-2">Chapter 2. Basic electronics and electrical engineering</a><a class="" href="#chapter-3">Chapter 3. Sensors and actuators</a><a class="" href="#chapter-4">Chapter 4. Motion and mechanical engineering</a><a class="" href="#chapter-5">Chapter 5. Introduction to controllers</a><a class="" href="#section-3">Stage 1 — 18 practical activities</a><a class="stage" href="#stage-2">Stage 2 — Robotics Maker</a><a class="" href="#chapter-6">Chapter 6. Programming fundamentals</a><a class="" href="#chapter-7">Chapter 7. Arduino and sensor interfacing</a><a class="" href="#chapter-8">Chapter 8. Motor control and robot construction</a><a class="" href="#chapter-9">Chapter 9. ESP32 and Internet of Things</a><a class="" href="#chapter-10">Chapter 10. Interactive robotics and mini-projects</a><a class="" href="#section-4">Stage 2 — 15 practical projects</a><a class="" href="#section-5">Teaching schedule — 80 hours</a><a class="" href="#section-6">Assessment and viva</a><a class="" href="#section-7">Reference library</a><a class="" href="#section-8">Final competency checklist</a></nav><div class="sideprogress"><div id="chapterCount"></div><div class="progress"><span id="chapterBar"></span></div></div></aside><main><section class="hero"><div class="eyebrow">Interactive engineering handbook · Foundation &amp; application</div><h1>Learn robotics from first principles.</h1><p>Electronics, mechanisms, embedded programming, wireless robotics and IoT — a practical learning pathway for students and instructors.</p><div class="stats"><div><b>80</b><small>Guided hours</small></div><div><b>10</b><small>Chapters</small></div><div><b>33</b><small>Activities</small></div><div><b>15</b><small>Quiz questions</small></div></div><a href="#chapter-1">Start learning ↓</a></section><div aria-live="polite" id="searchstatus"></div><article id="section-1"><h1>Robotics, Embedded Systems &amp; Artificial Intelligence</h1>
+<p>Stage 1 &amp; Stage 2 — Instructor handbook and student study material</p>
+<p><strong>TEJEEL INNOVATIONS LLP · Learn. Build. Automate. Innovate.</strong></p>
+<p>This learning portal follows pages 4–8 of the supplied 16-page curriculum. It covers 80 guided hours, ten modules and 33 activities. Stage 1 develops scientific foundations; Stage 2 converts those foundations into programmable physical systems. The student should learn the principle, build, measure, troubleshoot and independently modify a design. Examples use Arduino UNO R3 unless specified. Programs are instructional examples, not hardware-validated commercial firmware. The Zensin mechanism remains undefined in the source.</p>
+</article><article id="section-2"><h2>Study pathway</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Module</th>
+<th style="text-align:right">Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Explorer</td>
+<td>1. Introduction to robotics and technology</td>
+<td style="text-align:right">4</td>
+</tr>
+<tr>
+<td>Explorer</td>
+<td>2. Basic electronics</td>
+<td style="text-align:right">8</td>
+</tr>
+<tr>
+<td>Explorer</td>
+<td>3. Sensors and actuators</td>
+<td style="text-align:right">6</td>
+</tr>
+<tr>
+<td>Explorer</td>
+<td>4. Motion and mechanical engineering</td>
+<td style="text-align:right">10</td>
+</tr>
+<tr>
+<td>Explorer</td>
+<td>5. Introduction to controllers</td>
+<td style="text-align:right">4</td>
+</tr>
+<tr>
+<td>Maker</td>
+<td>6. Programming fundamentals</td>
+<td style="text-align:right">8</td>
+</tr>
+<tr>
+<td>Maker</td>
+<td>7. Arduino and sensor interfacing</td>
+<td style="text-align:right">8</td>
+</tr>
+<tr>
+<td>Maker</td>
+<td>8. Motor control and robot construction</td>
+<td style="text-align:right">12</td>
+</tr>
+<tr>
+<td>Maker</td>
+<td>9. ESP32 and IoT</td>
+<td style="text-align:right">8</td>
+</tr>
+<tr>
+<td>Maker</td>
+<td>10. Interactive robotics and mini-project</td>
+<td style="text-align:right">12</td>
+</tr>
+</tbody>
+</table></div>
+<p>Primary references: OpenStax University Physics Volumes 1 and 2; All About Circuits; Lynch and Park, Modern Robotics; NASA Glenn; Arduino; Espressif; Raspberry Pi; Texas Instruments. See the linked reference library at the end. Photographs are extracted from the supplied curriculum; additional vector diagrams are original educational illustrations, not the exact chat image results.</p>
+</article><article id="stage-1"><h1>Stage 1 — Robotics Explorer</h1>
+<p>32 hours · School and absolute beginner · No prerequisites</p>
+<p><img alt="Electronics, mechanisms and motors from the supplied curriculum" src="assets/stage3-0.jpeg"/></p>
+</article><article data-chapter="true" id="chapter-1"><h2>Chapter 1. Introduction to robotics and technology</h2>
+<p><strong>4 hours</strong></p>
+<p>A robot is a programmable physical machine designed to perform tasks by interacting with its environment. It may be remotely controlled, autonomous or combine both. Robotics combines mechanical engineering, electronics, computer science, control and sometimes AI. A robot does not need a human shape.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Subsystem</th>
+<th>Role</th>
+<th>Human analogy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sensors</td>
+<td>Detect conditions</td>
+<td>Eyes and skin</td>
+</tr>
+<tr>
+<td>Controller</td>
+<td>Process information</td>
+<td>Brain</td>
+</tr>
+<tr>
+<td>Actuators</td>
+<td>Produce action</td>
+<td>Muscles</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>Supply energy</td>
+<td>Food/metabolism</td>
+</tr>
+<tr>
+<td>Structure</td>
+<td>Support components</td>
+<td>Skeleton</td>
+</tr>
+<tr>
+<td>Software</td>
+<td>Define behaviour</td>
+<td>Instructions</td>
+</tr>
+<tr>
+<td>Communication</td>
+<td>Exchange information</td>
+<td>Signalling</td>
+</tr>
+<tr>
+<td>End effector</td>
+<td>Interact with objects</td>
+<td>Hand</td>
+</tr>
+</tbody>
+</table></div>
+<div data-widget="robot"></div>
+<h3>Robotics, automation and AI</h3>
+<p>Robotics concerns physical programmable machines. Automation performs tasks with reduced human intervention (e.g. bottle filling). Artificial intelligence uses computational methods for recognition, prediction, planning or learning (e.g. detecting defects in images). A robot may use fixed rules without AI; AI can also exist entirely in software. A threshold-based obstacle avoider is not necessarily an AI robot.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Robot type</th>
+<th>Applications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Industrial</td>
+<td>Welding, painting, packaging, assembly</td>
+</tr>
+<tr>
+<td>Humanoid</td>
+<td>Research, interaction, experimental automation</td>
+</tr>
+<tr>
+<td>Mobile</td>
+<td>Wheels, tracks or legs; warehouse delivery</td>
+</tr>
+<tr>
+<td>Aerial</td>
+<td>Mapping, inspection, crop monitoring</td>
+</tr>
+<tr>
+<td>Agricultural</td>
+<td>Weeding, harvesting, monitoring, irrigation</td>
+</tr>
+<tr>
+<td>Medical</td>
+<td>Surgical assistance, rehabilitation, logistics</td>
+</tr>
+</tbody>
+</table></div>
+<div data-widget="types"></div>
+<h3>Input, process, output and feedback</h3>
+<p>A temperature sensor measures room temperature; the controller compares it with a target; a fan switches on; the temperature is measured again to correct the action. Open-loop control acts without measuring the result (motor runs five seconds). Closed-loop control measures the result and corrects it (encoder measures wheel motion until a target is reached). Feedback is not necessarily AI.</p>
+<div data-widget="feedback"></div>
+<h3>Engineering design process</h3>
+<p>Identify problem → define requirements → generate alternatives → select feasible design → prototype → test → improve → document. Ask students to propose a robot for their school. For a dustbin, discuss detection, obstruction, low battery and mechanical improvements before coding.</p>
+<h3>Laboratory safety</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Hazard</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Short circuit</td>
+<td>Disconnect power before rewiring; use current-limited low-voltage supplies</td>
+</tr>
+<tr>
+<td>Mains</td>
+<td>Never connect a breadboard to 230 V AC</td>
+</tr>
+<tr>
+<td>Batteries</td>
+<td>Approved chargers and protected packs; avoid damaged cells and shorts</td>
+</tr>
+<tr>
+<td>Polarity</td>
+<td>Verify supply and component orientation</td>
+</tr>
+<tr>
+<td>Motors</td>
+<td>Avoid prolonged stall, keep fingers and hair away</td>
+</tr>
+<tr>
+<td>Soldering</td>
+<td>Supervision, ventilation, eye protection</td>
+</tr>
+<tr>
+<td>Capacitors</td>
+<td>Safely discharge before handling</td>
+</tr>
+<tr>
+<td>Water</td>
+<td>Separate liquids and energized electronics</td>
+</tr>
+<tr>
+<td>Flying mechanisms</td>
+<td>Paper gliders/simulation, no unsupervised powered propellers</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Review:</strong> Define robotics, automation and AI. Name five robot types. Explain the robot subsystems, open/closed loop and design steps. Why should motors not be powered by GPIO? Propose a school robot.</p>
+</article><article data-chapter="true" id="chapter-2"><h2>Chapter 2. Basic electronics and electrical engineering</h2>
+<p><strong>8 hours</strong></p>
+<h3>Charge, voltage, current and resistance</h3>
+<p>Atoms contain positive protons, negative electrons and neutral neutrons. Conductors allow charge movement; insulators resist it; semiconductor conductivity is controllable. Conventional current is defined in the direction positive charge would move. In a metal, electrons drift oppositely.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Charge</td>
+<td>Q</td>
+<td>C</td>
+<td>Amount of charge</td>
+</tr>
+<tr>
+<td>Voltage</td>
+<td>V</td>
+<td>V</td>
+<td>Energy per charge, V = E/Q</td>
+</tr>
+<tr>
+<td>Current</td>
+<td>I</td>
+<td>A</td>
+<td>Rate of charge flow, I = Q/t</td>
+</tr>
+<tr>
+<td>Resistance</td>
+<td>R</td>
+<td>Ω</td>
+<td>Opposition to current, R = ρL/A</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>P</td>
+<td>W</td>
+<td>Rate of energy transfer</td>
+</tr>
+<tr>
+<td>Energy</td>
+<td>E</td>
+<td>J or Wh</td>
+<td>Energy transferred</td>
+</tr>
+<tr>
+<td>Capacitance</td>
+<td>C</td>
+<td>F</td>
+<td>Charge per voltage</td>
+</tr>
+<tr>
+<td>Inductance</td>
+<td>L</td>
+<td>H</td>
+<td>Magnetic flux linkage per current (linear case)</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Ohm's law and power</h3>
+<p>For an ohmic resistor at constant physical conditions, V = IR. A 9 V battery across 1 kΩ gives 9 mA. P = VI = I²R = V²/R for a resistor. A 5 V device drawing 0.2 A uses 1 W and in two hours consumes 2 Wh. Check resistor power ratings before applying voltage.</p>
+<div data-widget="ohm"></div>
+<h3>Circuits</h3>
+<p>Open circuit: interrupted path. Closed circuit: continuous path. A short circuit is unintended low resistance; excessive current can cause damage. Never short a real battery as a demonstration. Series components carry equal current, Rtotal = R1 + R2 + …; 100 Ω + 200 Ω = 300 Ω. Parallel branches share voltage, 1/Rtotal = 1/R1 + 1/R2 + …; 100 Ω parallel 200 Ω gives 66.67 Ω.</p>
+<div data-widget="circuits"></div>
+<h3>Kirchhoff's laws</h3>
+<p>KCL: total incoming current equals total outgoing current at a node in ordinary lumped circuit analysis (5 A = 2 A + 3 A). KVL: algebraic voltage sum around a closed lumped DC loop is zero (12 − 4 − 8 = 0). Use these to locate incorrect supply voltages and branch currents.</p>
+<div data-widget="kirchhoff"></div>
+<h3>AC and DC</h3>
+<p>DC normally flows in one direction (batteries/USB). AC reverses periodically (power distribution). Beginner laboratory supplies must be isolated low-voltage DC.</p>
+<div data-widget="waveforms"></div>
+<h3>Electronic components</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Working principle and uses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resistor</td>
+<td>Limits current, divides voltage, establishes bias. Common 220 Ω, 330 Ω, 1 kΩ, 4.7 kΩ, 10 kΩ</td>
+</tr>
+<tr>
+<td>Capacitor</td>
+<td>Stores energy in electric field; Q=CV; filtering, timing, supply stabilization. Observe electrolytic polarity</td>
+</tr>
+<tr>
+<td>Inductor</td>
+<td>Magnetic energy storage, V=L dI/dt; opposes rapid current change; converters and filters</td>
+</tr>
+<tr>
+<td>Potentiometer</td>
+<td>Adjustable resistor, three terminals; voltage divider and control input</td>
+</tr>
+<tr>
+<td>Diode</td>
+<td>Predominantly one-way conduction, rectification and flyback protection; nonlinear semiconductor</td>
+</tr>
+<tr>
+<td>LED</td>
+<td>Emits light when forward biased; needs current limitation</td>
+</tr>
+<tr>
+<td>Transistor</td>
+<td>BJT/MOSFET switching or amplification; allows small signal to control externally supplied load current</td>
+</tr>
+<tr>
+<td>IC</td>
+<td>Multiple devices on a chip; timers, logic, drivers and controllers</td>
+</tr>
+</tbody>
+</table></div>
+<div data-widget="components"></div>
+<h3>Resistor colour codes</h3>
+<p>First two bands represent digits; third multiplier; fourth tolerance. Black 0, brown 1, red 2, orange 3, yellow 4, green 5, blue 6, violet 7, grey 8, white 9. The multiplier is 10 to the power of its digit; gold ×0.1, silver ×0.01. Gold ±5%, silver ±10% in tolerance position. Red-red-brown-gold = 220 Ω ±5%.</p>
+<div data-widget="resistor"></div>
+<h3>LED current limiting</h3>
+<p>R = (Vs − Vf)/If. For 5 V, red LED Vf≈2 V, target 10 mA: R = 300 Ω; choose 330 Ω standard. Actual LED voltage varies. Anode commonly longer, cathode commonly shorter/flat side; verify datasheet or diode test. Connect supply → resistor → anode → cathode → ground.</p>
+<div data-widget="led"></div>
+<h3>Capacitor charging and discharging</h3>
+<p>Time constant τ=RC. Charging from zero: Vc=Vs(1−exp(−t/τ)); discharge: Vc=V0 exp(−t/τ). At τ charging reaches 63.2%, at 5τ 99.3%. Applications include filtering, timing and debouncing. Use rated voltage and correct polarity.</p>
+<div data-widget="rc"></div>
+<h3>Voltage divider</h3>
+<p>Vout=Vin R2/(R1+R2), for negligible output loading. Two 10 kΩ resistors across 5 V give 2.5 V. LDRs and thermistors can form variable dividers. A divider is not a suitable motor power supply.</p>
+<div data-widget="divider"></div>
+<h3>Binary and Boolean logic</h3>
+<p>A digital value encodes discrete states. Logic HIGH/LOW voltage thresholds depend on the device. Binary 1011 = 8+2+1 = 11. Eight unsigned bits encode 0–255. Four-bit examples: 0=0000, 1=0001, 2=0010, 3=0011, 4=0100, 5=0101, 6=0110, 7=0111, 8=1000, 9=1001, 10=1010, 15=1111.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>AND</th>
+<th>OR</th>
+<th>NAND</th>
+<th>NOR</th>
+<th>XOR</th>
+<th>XNOR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table></div>
+<p>NOT inverts one input. AND requires both conditions, OR any condition, XOR different states, XNOR equal states. NAND/NOR are universal gates. Examples: start AND safety; alarm OR sensor; NOT daylight; XOR discrepancy.</p>
+<div data-widget="logic"></div>
+<h3>Power supplies and batteries</h3>
+<p>AA packs, USB, regulated bench supplies, rechargeable packs, buck (step down), boost (step up), linear regulators. Battery capacity 2000 mAh / 500 mA gives ideal 4 h; actual runtime varies. A 5 V system with controller 100 mA, sensors 50 mA, motors 600 mA, display 50 mA draws 800 mA normally; design for transient current and motor stall too. Voltage, discharge current, chemistry, protection and charger compatibility matter.</p>
+<h3>Breadboard and multimeter</h3>
+<p>A breadboard connects groups of holes internally. Check the terminal strips and whether supply rails are split. Multimeter: voltage measured in parallel with energized circuit; current in series using correct fused port/range; resistance and continuity on disconnected, discharged circuit; diode mode checks forward voltage. Never place a meter in current mode directly across a supply.</p>
+<div data-widget="breadboard"></div>
+<h3>Laboratory: verify Ohm's law</h3>
+<p>Use a current-limited supply, 1 kΩ resistor, meter, breadboard and leads. Apply 1–5 V, measure across resistor and in series. Expected currents: 1, 2, 3, 4, 5 mA respectively. Record real readings and plot voltage against current. Discuss tolerance, reference accuracy and uncertainty.</p>
+</article><article data-chapter="true" id="chapter-3"><h2>Chapter 3. Sensors and actuators</h2>
+<p><strong>6 hours</strong></p>
+<p>A sensor converts a physical quantity into a measurable signal. An actuator converts energy into physical action.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Range</td>
+<td>Measurable minimum to maximum</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>Closeness to true value</td>
+</tr>
+<tr>
+<td>Precision</td>
+<td>Repeatability of readings</td>
+</tr>
+<tr>
+<td>Resolution</td>
+<td>Smallest measurable change</td>
+</tr>
+<tr>
+<td>Sensitivity</td>
+<td>Output change per input change</td>
+</tr>
+<tr>
+<td>Response time</td>
+<td>Time to respond</td>
+</tr>
+<tr>
+<td>Noise</td>
+<td>Unwanted variations</td>
+</tr>
+<tr>
+<td>Calibration</td>
+<td>Compare and adjust against reference</td>
+</tr>
+<tr>
+<td>Hysteresis</td>
+<td>Response depends on direction/history</td>
+</tr>
+</tbody>
+</table></div>
+<div data-widget="accuracy"></div>
+<h3>Analog and digital signals</h3>
+<p>Analog outputs vary continuously; digital outputs encode states or measurements. LDR dividers produce analog voltages; DHT sensors transmit digital measurements. Sampling and quantization convert analog values to numeric codes.</p>
+<div data-widget="signals"></div>
+<h3>Sensors and principles</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Sensor</th>
+<th>Principle and applications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LDR</td>
+<td>Light decreases resistance; streetlights, light followers. LDR to supply and fixed resistor to ground gives higher voltage in bright light</td>
+</tr>
+<tr>
+<td>HC-SR04</td>
+<td>Ultrasonic time-of-flight: d=vt/2, speed of sound ≈343 m/s at 20°C. Angled/soft surfaces and temperature affect results</td>
+</tr>
+<tr>
+<td>IR reflectance/proximity</td>
+<td>Emits IR and senses reflection; line tracking and obstacle detection, calibrate actual materials</td>
+</tr>
+<tr>
+<td>DHT11/DHT22</td>
+<td>Digital temperature and relative humidity; greenhouse/weather station</td>
+</tr>
+<tr>
+<td>LM35</td>
+<td>Analog 10 mV/°C nominal; 250 mV ≈25°C within conditions</td>
+</tr>
+<tr>
+<td>NTC thermistor</td>
+<td>Resistance decreases as temperature increases</td>
+</tr>
+<tr>
+<td>Capacitive touch</td>
+<td>Finger changes capacitance; touch lamps and interaction</td>
+</tr>
+<tr>
+<td>PIR</td>
+<td>Changing infrared radiation from moving warm objects; alarms</td>
+</tr>
+<tr>
+<td>Hall-effect</td>
+<td>Magnetic field sensing; speed and position</td>
+</tr>
+<tr>
+<td>IMU</td>
+<td>Accelerometer measures specific force; gyro measures angular velocity; orientation estimation</td>
+</tr>
+<tr>
+<td>Soil moisture</td>
+<td>Capacitive sensing; irrigation, requires soil calibration</td>
+</tr>
+<tr>
+<td>Microphone</td>
+<td>Sound pressure signal or intensity threshold, not speech recognition</td>
+</tr>
+<tr>
+<td>Pressure sensor</td>
+<td>Measures pressure via transduction</td>
+</tr>
+</tbody>
+</table></div>
+<div data-widget="ultrasonic"></div>
+<h3>Actuators and motors</h3>
+<p>LED produces light; buzzer sound; relay switches contacts; DC motor rotation; servo controlled position; stepper discrete rotation; solenoid linear movement; electromagnet magnetic force; pneumatic cylinder compressed-air motion.</p>
+<p>A brushed DC motor has stator, rotor/armature, brushes, commutator and shaft. Current in a magnetic field generates force and torque; polarity reversal reverses direction. Back EMF opposes supply, V=IR+Eb in simplified steady state. Startup and stall current may be much greater than running current. Select driver and supply accordingly; do not deliberately stall a motor for prolonged periods.</p>
+<p>A positional hobby servo integrates DC motor, gears, position sensor and feedback controller. Typical wires red power, brown/black ground, orange/yellow/white signal (verify actual data). Many use repeating pulses around 20 ms and 1–2 ms pulse width; limits vary. Continuous-rotation servos instead command speed/direction.</p>
+<div data-widget="servo"></div>
+<p>Stepper motor: full step angle = 360°/steps per revolution; 200 steps → 1.8°. Used for printers and positioning; open-loop systems can miss steps without detecting it. Driver must match motor windings and current.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Motor</th>
+<th>Control</th>
+<th>Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DC</td>
+<td>Continuous speed, direction; feedback needed for position</td>
+<td>Wheels</td>
+</tr>
+<tr>
+<td>Servo</td>
+<td>Internal closed-loop position, typically limited travel</td>
+<td>Joints</td>
+</tr>
+<tr>
+<td>Stepper</td>
+<td>Incremental rotation; often open-loop</td>
+<td>Precision positioning</td>
+</tr>
+</tbody>
+</table></div>
+<div data-widget="motors"></div>
+<p>Relays have COM, NO and NC contacts. Solenoids move a plunger with a coil. Electromagnets create magnetic fields. Use appropriate driver and flyback diode for unidirectional inductive coils. Pneumatics use regulator, valve, tubing and cylinder; ideal force F=PA, pressure difference times effective area. Demonstrate with air-filled linked syringes, not high-pressure equipment.</p>
+<p>Speed (RPM), torque (turning effect), load (mechanical demand), power P=τω. Motor speed generally falls as load increases. Never confuse stall torque with safe continuous torque.</p>
+</article><article data-chapter="true" id="chapter-4"><h2>Chapter 4. Motion and mechanical engineering</h2>
+<p><strong>10 hours</strong></p>
+<p>Linear motion follows a line; rotary motion turns about an axis; oscillation repeats angular motion; reciprocation repeats back-and-forth linear motion.</p>
+<div data-widget="motion"></div>
+<h3>Motion equations</h3>
+<p>Average speed v=d/t; average acceleration a=(v−u)/t; F=ma for constant mass. Angular velocity ω=2πN/60, N in RPM. Rolling without slip gives v=rω. Wheel diameter 65 mm, 100 RPM: circumference 0.2042 m, speed 0.340 m/s ideal. Load and slip affect actual speed.</p>
+<h3>Torque</h3>
+<p>τ=rF sinθ; for perpendicular force τ=rF. For a horizontal arm lifting a mass, F=mg. Arm, gripper, acceleration and friction also contribute. Use continuous torque ratings and safety margins, not stall torque alone.</p>
+<div data-widget="torque"></div>
+<h3>Gears and mechanical transmission</h3>
+<p>Spur gears for parallel shafts; helical for smoother engagement; bevel for intersecting axes; worm for large reductions; rack and pinion converts rotation to translation; planetary compact reduction. Gear ratio G=driven teeth/driver teeth; output RPM=input RPM/G; output torque≈input torque×G×efficiency. Gears do not create energy. Belt/pulley uses flexible transmission; chain/sprocket engages teeth; lead screw converts rotary to linear motion.</p>
+<div data-widget="gears"></div>
+<h3>Mechanisms</h3>
+<p>Cam and follower converts rotation into prescribed follower motion. Crank-slider converts rotation into reciprocation (pumps/engines). Four-bar linkage consists of four rigid links including the frame and pivot joints; creates controlled motion in grippers and walking mechanisms. Build with cardboard and pivots first.</p>
+<div data-widget="crank"></div><div data-widget="linkages"></div>
+<h3>Walking and flight</h3>
+<p>Walking mechanisms alternate stance (support) and swing (move); gait coordinates legs. For quasi-static stability the centre-of-mass projection should remain within the support polygon. Study Klann/Jansen-style linkages and quadruped motion. For aircraft: lift acts perpendicular to relative airflow, drag opposes it, thrust propels, weight acts downward. In steady level flight lift balances weight and thrust balances drag in a simplified model. Roll, pitch and yaw are rotations about longitudinal, lateral and vertical axes. Use gliders/simulation in beginner labs.</p>
+<div data-widget="flight"></div>
+<h3>Stability, friction and load distribution</h3>
+<p>A lower centre of mass generally resists tipping. Static friction maximum Fs=μsN; traction enables wheels to move the robot. Weight distribution affects normal forces and traction. Test wheel materials on different surfaces.</p>
+<div data-widget="stability"></div>
+<h3>Robot anatomy</h3>
+<p>Link: rigid member; joint: relative motion connection; revolute: rotary; prismatic: linear; end effector: tool; workspace: reachable region; payload: designed load; degrees of freedom: independent configuration variables. A base, shoulder and elbow with independent rotary joints give three joint DOF.</p>
+<div data-widget="arm"></div>
+</article><article data-chapter="true" id="chapter-5"><h2>Chapter 5. Introduction to controllers</h2>
+<p><strong>4 hours</strong></p>
+<p>A microprocessor is a programmable processing unit typically requiring external system components. A microcontroller integrates CPU, memory and peripherals for embedded control. CPU fetches, decodes and executes instructions; ALU performs arithmetic/logic; flash stores firmware; RAM temporary data; GPIO inputs/outputs; ADC converts voltage; timers schedule events; clock coordinates timing; communication peripherals exchange data.</p>
+<div data-widget="controller"></div>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Board</th>
+<th>Type</th>
+<th>Logic</th>
+<th>Network</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arduino UNO R3</td>
+<td>ATmega328P MCU</td>
+<td>5 V</td>
+<td>No built-in Wi-Fi/Bluetooth</td>
+<td>Basic C/C++ embedded control</td>
+</tr>
+<tr>
+<td>Classic ESP32 DevKit</td>
+<td>MCU</td>
+<td>3.3 V</td>
+<td>Wi-Fi, Classic Bluetooth, BLE</td>
+<td>Wireless IoT and control</td>
+</tr>
+<tr>
+<td>Raspberry Pi 5</td>
+<td>Single-board computer</td>
+<td>3.3 V GPIO</td>
+<td>Wi-Fi, Bluetooth</td>
+<td>Linux, Python, vision</td>
+</tr>
+</tbody>
+</table></div>
+<p>Pi 5 has no built-in general-purpose analog input; add ADC. GPIO is not 5 V tolerant. Raspberry Pi Pico is an MCU, not a Linux SBC. ESP32 variants differ.</p>
+<p>Algorithm = defined steps to solve a problem; flowchart represents them graphically. Example: read temperature; if above 30°C turn fan on, otherwise off; repeat. Begin in natural language, translate to pseudocode and then code.</p>
+<div data-widget="flowchart"></div>
+</article><article id="section-3"><h2>Stage 1 — 18 practical activities</h2>
+<p>These are a demonstration bank, not 18 compulsory independent builds. Use low-voltage, supervised experiments. Record aim, components, diagram, principle, procedure, observations, calculations, result, precautions, faults and improvements.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Activity</th>
+<th>Components, method and expected result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Fire alarm</td>
+<td>Thermistor, comparator, transistor, buzzer; warm sensor safely and verify threshold; not life-safety equipment</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Burglar alarm</td>
+<td>Reed switch/button and buzzer; model door opening triggers alarm</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Logic gates</td>
+<td>Compatible logic ICs, switches with pull resistors, LEDs/resistors; verify AND OR NOR NAND XOR truth tables</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Metal detection</td>
+<td>Low-voltage inductive detector module; move metal near coil and compare response</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Light intensity control</td>
+<td>Potentiometer input and PWM module/LED resistor; vary brightness</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Traffic signal</td>
+<td>Red/yellow/green LEDs with separate resistors; sequence lights manually or with controller demo</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Touch light</td>
+<td>Capacitive touch module and LED; test touch/release</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Night lamp</td>
+<td>LDR divider and comparator/transistor; cover LDR and observe threshold</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Water level</td>
+<td>Float switches or low-voltage sensor; test levels with isolated power and no wet wiring</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Gear motion</td>
+<td>Count teeth and revolutions, compare predicted and observed ratio</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Circular motion</td>
+<td>Hand crank/disc and axle; observe rotation and radius</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Flying mechanism</td>
+<td>Paper aircraft/foam glider; compare balance and flight distances</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Walking mechanism</td>
+<td>Cardboard links, pivots, hand crank; trace foot path</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Aarti mechanism</td>
+<td>Unlit model plate; compare circular and oscillatory movement</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Pulley lift</td>
+<td>Fixed/movable pulley, light loads; compare effort and travel</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Crank-slider</td>
+<td>Disc, connecting rod, slider; measure stroke</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Four-bar linkage</td>
+<td>Frame and three moving links; observe range and transmission</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Mechanical gripper</td>
+<td>Cardboard/printed links and pivots; test light objects and grip geometry</td>
+</tr>
+</tbody>
+</table></div>
+</article><article id="stage-2"><h1>Stage 2 — Robotics Maker</h1>
+<p>48 hours · Theory, programming and practical application</p>
+<p><img alt="Arduino robotics, embedded systems and interactive robots from the supplied curriculum" src="assets/stage6-0.jpeg"/></p>
+</article><article data-chapter="true" id="chapter-6"><h2>Chapter 6. Programming fundamentals</h2>
+<p><strong>8 hours</strong></p>
+<p>Install <a href="https://www.arduino.cc/en/software" rel="noopener noreferrer" target="_blank">Arduino IDE</a>, connect USB, select correct board and port, write, verify, upload and observe. Sketch <code>setup()</code> executes once after reset, <code>loop()</code> repeats. Flowcharts and pseudocode help plan before implementation.</p>
+<h3>Blink LED</h3>
+<pre><code class="language-cpp">void setup() { pinMode(LED_BUILTIN, OUTPUT); }
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH); delay(1000);
+  digitalWrite(LED_BUILTIN, LOW); delay(1000);
+}
+</code></pre>
+<p><code>pinMode</code> configures direction; <code>digitalWrite</code> sets state; <code>delay</code> pauses in milliseconds. Modify timing and explain each line.</p>
+<h3>Variables, types and operators</h3>
+<pre><code class="language-cpp">int temperature = 25;
+float distance = 15.5;
+bool objectDetected = false;
+char command = 'F';
+const int ledPin = 13;
+unsigned long lastTime = 0;
+</code></pre>
+<p><code>int</code> integer (typically 16 bits on UNO R3, 32 on ESP32), <code>float</code> decimal, <code>bool</code> true/false, <code>char</code> character, <code>unsigned long</code> nonnegative timing value, <code>const</code> not modifiable through that name. Arithmetic + − * / %, comparisons == != &gt; &lt; &gt;= &lt;=, logical &amp;&amp; || !, assignment = += -=, increments ++ --. Do not confuse assignment and equality.</p>
+<h3>Conditions, loops, functions and arrays</h3>
+<pre><code class="language-cpp">int temperature = 35;
+void setup() { Serial.begin(9600); }
+void loop() {
+  if (temperature &gt; 30) Serial.println("Fan ON");
+  else Serial.println("Fan OFF");
+  delay(1000);
+}
+</code></pre>
+<p><code>else if</code> tests further conditions. <code>for (int i=0; i&lt;10; i++)</code> repeats a fixed number; <code>while (condition)</code> repeats until false. Uncontrolled loops block responsiveness. Functions isolate reusable behaviour; arrays collect same-type values.</p>
+<pre><code class="language-cpp">const int pins[] = {2, 3, 4};
+void blinkLED(int pin, int duration) {
+  digitalWrite(pin, HIGH); delay(duration);
+  digitalWrite(pin, LOW); delay(duration);
+}
+void setup() {
+  for(int i=0; i&lt;3; i++) pinMode(pins[i], OUTPUT);
+}
+void loop() {
+  for(int i=0; i&lt;3; i++) blinkLED(pins[i], 300);
+}
+</code></pre>
+<p>Each external LED needs its own current-limiting resistor.</p>
+<h3>Serial and debugging</h3>
+<pre><code class="language-cpp">void setup() { Serial.begin(9600); }
+void loop() {
+  Serial.print("Sensor Value: ");
+  Serial.println(analogRead(A0));
+  delay(500);
+}
+</code></pre>
+<p>Serial Monitor shows values; Serial Plotter shows changing measurements. Compile errors: syntax/library. Upload errors: board/port/cable. Incorrect sensor: wiring/calibration/reference. Resets: power/noise. Unexpected motor: polarity or control logic. Slow response: blocking code.</p>
+<h3>Non-blocking timing</h3>
+<pre><code class="language-cpp">unsigned long previousTime=0;
+const unsigned long interval=500;
+bool ledState=false;
+void setup(){pinMode(LED_BUILTIN,OUTPUT);}
+void loop(){
+  unsigned long now=millis();
+  if(now-previousTime&gt;=interval){
+    previousTime=now;
+    ledState=!ledState;
+    digitalWrite(LED_BUILTIN,ledState);
+  }
+  // Read other sensors here.
+}
+</code></pre>
+<p>Use unsigned subtraction to tolerate timer rollover. AI-assisted workflow: generate → read → explain → verify hardware and libraries → compile → test → modify. Never upload unreviewed motor code.</p>
+</article><article data-chapter="true" id="chapter-7"><h2>Chapter 7. Arduino and sensor interfacing</h2>
+<p><strong>8 hours</strong></p>
+<p>UNO R3: ATmega328P, 16 MHz, 14 digital pins, six analog inputs, PWM pins 3/5/6/9/10/11, 10-bit ADC, 32 KB flash, 2 KB SRAM, 1 KB EEPROM, 5 V logic. Recommended 20 mA per I/O, aggregate limits apply. See <a href="https://docs.arduino.cc/hardware/uno-rev3/" rel="noopener noreferrer" target="_blank">UNO R3 documentation</a>. Motors/pumps need a driver.</p>
+<h3>Digital input, pull-ups and debounce</h3>
+<p>D2 to button to ground; internal pull-up prevents floating state. Open reads HIGH, pressed reads LOW.</p>
+<pre><code class="language-cpp">const int buttonPin=2, ledPin=13;
+void setup(){pinMode(buttonPin,INPUT_PULLUP);pinMode(ledPin,OUTPUT);}
+void loop(){digitalWrite(ledPin,digitalRead(buttonPin)==LOW);}
+</code></pre>
+<p>Mechanical switch contacts bounce. Accept a new state only after it remains stable for a chosen time, e.g. 20–50 ms, calibrated to the switch. <a href="https://docs.arduino.cc/built-in-examples/digital/Debounce/" rel="noopener noreferrer" target="_blank">Official debounce example</a>.</p>
+<h3>ADC</h3>
+<p>10-bit ADC has 1024 codes, 0–1023; ideal step 5/1024≈4.88 mV for 5 V reference. Endpoint approximation voltage=raw×5/1023. Reference voltage, noise and ADC characteristics affect accuracy.
+<div data-widget="adc"></div></p>
+<pre><code class="language-cpp">void setup(){Serial.begin(9600);}
+void loop(){
+  int raw=analogRead(A0);
+  Serial.println(raw*5.0/1023.0);
+  delay(500);
+}
+</code></pre>
+<h3>PWM</h3>
+<p>Duty cycle = Ton/T ×100%. UNO analogWrite produces switching, not a true analog voltage. A value 0–255 controls duty; 127≈50%. LED brightness and motor output depend on circuit dynamics.
+<div data-widget="pwm"></div></p>
+<pre><code class="language-cpp">const int ledPin=9;
+void setup(){pinMode(ledPin,OUTPUT);}
+void loop(){
+  for(int b=0;b&lt;=255;b++){analogWrite(ledPin,b);delay(10);}
+  for(int b=255;b&gt;=0;b--){analogWrite(ledPin,b);delay(10);}
+}
+</code></pre>
+<h3>Automatic streetlight and calibration</h3>
+<p>LDR from 5 V to A0 junction; 10 kΩ from A0 to GND; D9 to 330 Ω resistor to LED anode, cathode to GND. Record dark/bright values, choose threshold between them. If darkness=200 and bright=800, 500 is starting point. Use hysteresis: switch on below 350 and off above 450 to avoid chatter.</p>
+<pre><code class="language-cpp">bool lightOn=false;
+void setup(){pinMode(9,OUTPUT);Serial.begin(9600);}
+void loop(){
+  int value=analogRead(A0); Serial.println(value);
+  if(value&lt;350)lightOn=true;
+  else if(value&gt;450)lightOn=false;
+  digitalWrite(9,lightOn);delay(100);
+}
+</code></pre>
+<h3>Ultrasonic distance</h3>
+<p>HC-SR04 VCC→5V, GND→GND, TRIG→D7, ECHO→D8 on UNO. ESP32 requires level reduction on conventional 5 V Echo. Invalid echo must not be treated as a valid distance.</p>
+<pre><code class="language-cpp">const int trigPin=7,echoPin=8;
+float readDistance(){
+  digitalWrite(trigPin,LOW);delayMicroseconds(2);
+  digitalWrite(trigPin,HIGH);delayMicroseconds(10);
+  digitalWrite(trigPin,LOW);
+  unsigned long duration=pulseIn(echoPin,HIGH,30000);
+  if(duration==0)return -1;
+  return duration*0.0343/2.0;
+}
+void setup(){pinMode(trigPin,OUTPUT);pinMode(echoPin,INPUT);Serial.begin(9600);}
+void loop(){Serial.println(readDistance());delay(100);}
+</code></pre>
+<h3>Displays</h3>
+<p>16×2 LCD displays two lines of characters; SSD1306 OLED draws pixels and text. I2C SDA data, SCL clock; UNO A4/A5. Verify voltage and address; 0x3C common for OLED but not universal. Install Adafruit GFX and SSD1306 libraries. LCD I2C backpacks often use different addresses/libraries.</p>
+<pre><code class="language-cpp">#include &lt;Wire.h&gt;
+#include &lt;Adafruit_GFX.h&gt;
+#include &lt;Adafruit_SSD1306.h&gt;
+Adafruit_SSD1306 display(128,64,&amp;Wire,-1);
+void setup(){
+  if(!display.begin(SSD1306_SWITCHCAPVCC,0x3C)){while(true){}}
+  display.clearDisplay();display.setTextSize(2);
+  display.setTextColor(SSD1306_WHITE);display.setCursor(0,0);
+  display.println("TEJEEL");display.display();
+}
+void loop(){}
+</code></pre>
+</article><article data-chapter="true" id="chapter-8"><h2>Chapter 8. Motor control and robot construction</h2>
+<p><strong>12 hours</strong></p>
+<h3>Motor drivers and H-bridge</h3>
+<p>L298N works for demos but has significant conduction losses. DRV8833 or TB6612FNG are often efficient for suitable small motors. ULN2003 is suitable for compatible unipolar steppers; A4988 for bipolar motors with current limiting. Check motor voltage, stall current, driver thermal ratings and module enable/sleep configuration. H-bridge reverses motor current by switching diagonal pairs; never switch both devices in one leg together. Use commercial protected drivers.
+<div data-widget="hbridge"></div></p>
+<h3>DC motor and differential drive</h3>
+<p>DRV8833 compatible module: AIN1 D5, AIN2 D6, BIN1 D9, BIN2 D10; motors to output pairs, VM to suitable external motor supply, common ground with UNO. Enable as required. Test on blocks before floor operation. <code>drive</code> values are PWM commands, not measured wheel velocity. Motor orientation may need reversal.</p>
+<pre><code class="language-cpp">const int L1=5,L2=6,R1=9,R2=10;
+void setMotor(int p1,int p2,int speedValue){
+  speedValue=constrain(speedValue,-255,255);
+  if(speedValue&gt;=0){digitalWrite(p2,LOW);analogWrite(p1,speedValue);}
+  else{digitalWrite(p1,LOW);analogWrite(p2,-speedValue);}
+}
+void drive(int left,int right){setMotor(L1,L2,left);setMotor(R1,R2,right);}
+void stopRobot(){drive(0,0);}
+void setup(){pinMode(L1,OUTPUT);pinMode(L2,OUTPUT);pinMode(R1,OUTPUT);pinMode(R2,OUTPUT);stopRobot();}
+void loop(){
+  drive(150,150);delay(1500);stopRobot();delay(300);
+  drive(-120,120);delay(500);stopRobot();delay(300);
+}
+</code></pre>
+<p>One motor alone: use setMotor(5,6,150), then stop with zero and reverse with −150. A positional servo uses external regulated supply, common ground, signal D9, verified safe travel.</p>
+<pre><code class="language-cpp">#include &lt;Servo.h&gt;
+Servo arm;
+void setup(){arm.attach(9);}
+void loop(){arm.write(30);delay(1000);arm.write(90);delay(1000);arm.write(150);delay(1000);}
+</code></pre>
+<p>Stepper example: compatible 28BYJ-48 and ULN2003; external rated power and common ground; IN1–IN4 to 8,9,10,11. Effective steps per revolution vary with gearbox, calibrate.</p>
+<pre><code class="language-cpp">#include &lt;Stepper.h&gt;
+const int stepsPerRevolution=2048;
+Stepper motor(stepsPerRevolution,8,10,9,11);
+void setup(){motor.setSpeed(8);}
+void loop(){motor.step(stepsPerRevolution);delay(1000);motor.step(-stepsPerRevolution);delay(1000);}
+</code></pre>
+<p>Differential-drive equations v=(vR+vL)/2 and ω=(vR−vL)/L where L is track width. Equal forward velocities give forward; left slower gives left turn; opposite velocities rotate on spot. Build a chassis with two driven wheels and caster; place battery low and secure wires.
+<div data-widget="drive"></div></p>
+<h3>Obstacle avoidance</h3>
+<p>Combine <code>readDistance()</code> and its pin setup from Chapter 7 with the motor functions and pin setup above. Replace the original loop. Invalid readings stop the robot. This is reactive rule-based autonomy, not mapping or AI.</p>
+<pre><code class="language-cpp">void loop(){
+  float d=readDistance();
+  if(d&lt;0)stopRobot();
+  else if(d&lt;20){stopRobot();delay(150);drive(-120,120);delay(350);stopRobot();}
+  else drive(140,140);
+  delay(50);
+}
+</code></pre>
+<h3>Line follower</h3>
+<p>Two IR reflectance sensors at D2/D3, configured INPUT; calibrate output polarity. Assumes both see wide black line when centred. Both black → forward; left only → left; right only → right; neither → stop/search. Adjust speed, sensor spacing, track width and ambient lighting.</p>
+<pre><code class="language-cpp">// Combine with motor functions and pin setup above.
+void loop(){
+  bool l=digitalRead(2)==LOW,r=digitalRead(3)==LOW;
+  if(l&amp;&amp;r)drive(140,140);
+  else if(l)drive(50,140);
+  else if(r)drive(140,50);
+  else stopRobot();
+}
+</code></pre>
+</article><article data-chapter="true" id="chapter-9"><h2>Chapter 9. ESP32 and Internet of Things</h2>
+<p><strong>8 hours</strong></p>
+<p>ESP32 chips integrate CPU, memory, GPIO, ADC, PWM, timers and interfaces such as UART, SPI and I2C. Classic ESP32 has Wi-Fi, Bluetooth Classic and BLE. C3 has Wi-Fi/BLE and RISC-V; S3 has Wi-Fi/BLE; C3/S3 do not support Classic BluetoothSerial. Verify exact board pinout, boot pins and voltage. ESP32 logic is normally 3.3 V, not 5 V tolerant.</p>
+<p>Install Espressif boards package via Arduino Boards Manager and select exact board. <a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/getting_started.html" rel="noopener noreferrer" target="_blank">Official getting started</a>.</p>
+<h3>Wi-Fi</h3>
+<p>Station mode joins a router; access point mode provides a local network. Never expose robot commands publicly without protection. Connection example:</p>
+<pre><code class="language-cpp">#include &lt;WiFi.h&gt;
+const char* ssid="YOUR_WIFI";
+const char* password="YOUR_PASSWORD";
+void setup(){
+  Serial.begin(115200);WiFi.begin(ssid,password);
+  unsigned long start=millis();
+  while(WiFi.status()!=WL_CONNECTED &amp;&amp; millis()-start&lt;15000){delay(250);Serial.print(".");}
+  if(WiFi.status()==WL_CONNECTED)Serial.println(WiFi.localIP());
+  else Serial.println("Connection failed");
+}
+void loop(){}
+</code></pre>
+<h3>Bluetooth and ESP-NOW</h3>
+<p>Bluetooth Classic supports serial-like exchange on compatible chips; BLE uses services and characteristics. RC phone command F/B/L/R/S maps to movement; validate commands and stop if valid messages cease. ESP-NOW exchanges packets directly without conventional router association. Register peers using MAC, match radio channels, validate length/source/range, use callbacks and a timeout. API signatures vary by board-package version; use <a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/api/espnow.html" rel="noopener noreferrer" target="_blank">official ESP-NOW examples</a>.</p>
+<pre><code class="language-cpp">struct ControlPacket { uint8_t command; uint8_t speedValue; };
+// Receiver: after validating a packet, update lastValidPacket.
+// In loop, if (millis()-lastValidPacket &gt; 500) stopRobot();
+</code></pre>
+<p>Start with a stopped receiver; stop after lost connection and require a fresh valid command. Do not treat an uninitialized timestamp as a command.
+<div data-widget="wireless"></div></p>
+<h3>IoT architecture and protocols</h3>
+<p>Sensor → ESP32 → network/server → dashboard → authorized control → actuator. HTTP request-response; HTTPS adds TLS; MQTT lightweight publish-subscribe broker; WebSocket bidirectional persistent connection; BLE short-range; ESP-NOW direct device packets. MQTT publisher sends to topics, subscriber receives, broker routes. Example topics <code>tejeel/lab/robot01/temperature</code>, <code>/distance</code>, <code>/command</code>, <code>/status</code>. Use Serial Plotter, local web dashboards, Node-RED and MQTT. A dashboard visualizes readings; it does not automatically make a system secure.
+<div data-widget="iot"></div>
+<div data-widget="dashboard"></div></p>
+<p>Security: authentication, protect credentials, validate data, avoid public unrestricted interfaces, use encryption where supported, stop on communication timeout. Do not publish passwords in repositories.</p>
+</article><article data-chapter="true" id="chapter-10"><h2>Chapter 10. Interactive robotics and mini-projects</h2>
+<p><strong>12 hours</strong></p>
+<p>Animatronics reproduces lifelike movement with mechanisms, motors, electronics and software. Begin with hand and neck, not full humanoid locomotion. Use calibrated servo limits and suitable external power with common ground. Servo library on UNO can interfere with timer-based PWM on D9/D10.</p>
+<pre><code class="language-cpp">#include &lt;Servo.h&gt;
+Servo hand,neck;
+void setup(){hand.attach(9);neck.attach(10);hand.write(90);neck.write(90);}
+void loop(){
+  neck.write(60);delay(500);
+  for(int i=0;i&lt;3;i++){hand.write(60);delay(350);hand.write(120);delay(350);}
+  hand.write(90);neck.write(90);delay(2000);
+}
+</code></pre>
+<h3>State machines and sequential motion</h3>
+<p>A state machine defines distinct operating modes and transitions. Greeting: idle → detect → wave → return → idle. Dustbin: closed/opening/open/closing. Traffic: red/green/yellow. Robot: idle/forward/turn/stop. Irrigation: monitoring/watering/fault. Prefer non-blocking timers when safety or sensors must be checked continuously.
+<div data-widget="states"></div></p>
+<h3>Smart dustbin</h3>
+<p>Combine the complete <code>readDistance()</code> function from Chapter 7 with this example (remove its original setup/loop). Use lightweight model lid, safe endpoints, external servo supply and common ground. Invalid distance leaves lid unchanged; production needs obstruction sensing and fault handling.</p>
+<pre><code class="language-cpp">#include &lt;Servo.h&gt;
+Servo lid;
+// Include trigPin, echoPin and readDistance() from Chapter 7.
+bool lidOpen=false;
+unsigned long lastDetection=0;
+void setup(){pinMode(trigPin,OUTPUT);pinMode(echoPin,INPUT);lid.attach(9);lid.write(20);}
+void loop(){
+  float d=readDistance();
+  if(d&gt;0 &amp;&amp; d&lt;20){lastDetection=millis();if(!lidOpen){lid.write(100);lidOpen=true;}}
+  else if(lidOpen &amp;&amp; d&gt;=20 &amp;&amp; millis()-lastDetection&gt;3000){lid.write(20);lidOpen=false;}
+  delay(60);
+}
+</code></pre>
+<h3>Sound/light and integration</h3>
+<p>Microphone modules detect intensity/threshold, not speech understanding. RGB LED combines red/green/blue channels, each with suitable current limiting; verify common anode/cathode. Test power first, sensors individually, actuators, communication and finally integration. Record faults and improvements.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Investigate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Servo shakes</td>
+<td>Supply transients, binding, commands</td>
+</tr>
+<tr>
+<td>Controller resets</td>
+<td>Voltage drop, noise, wiring</td>
+</tr>
+<tr>
+<td>ESP32 connection fails</td>
+<td>Credentials, radio channel, board selection</td>
+</tr>
+<tr>
+<td>Moves backwards</td>
+<td>Polarity/direction mapping</td>
+</tr>
+<tr>
+<td>Line lost</td>
+<td>Calibration, speed, spacing, lighting</td>
+</tr>
+<tr>
+<td>Ultrasonic fluctuates</td>
+<td>Angled surfaces, interference, invalid echo</td>
+</tr>
+<tr>
+<td>Driver hot</td>
+<td>Stall, excessive current, thermal limits</td>
+</tr>
+<tr>
+<td>RC keeps moving</td>
+<td>Missing timeout or stale packets</td>
+</tr>
+<tr>
+<td>Slow response</td>
+<td>Blocking delay or processing</td>
+</tr>
+</tbody>
+</table></div>
+</article><article id="section-4"><h2>Stage 2 — 15 practical projects</h2>
+<p>Four guided builds and one independently modified mini-project are mandatory. The following are choices, not 15 mandatory full builds. For each, document circuit, code, BOM, observations, test results and one independently implemented improvement.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Project</th>
+<th>Hardware / implementation / test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sensor monitoring</td>
+<td>UNO, LDR and temperature sensor; log and calibrate readings; compare references</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Motor and motion</td>
+<td>DC, servo and stepper with appropriate drivers; test direction, speed, safe positions</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Automatic streetlight</td>
+<td>LDR divider, LED, thresholds and PWM; test light/dark and hysteresis</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Smart dustbin</td>
+<td>Ultrasonic, lightweight servo lid; test opening, timing and invalid readings</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Line follower</td>
+<td>Two reflectance sensors, chassis and driver; tune threshold/speed and measure track completion</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Obstacle avoider</td>
+<td>Ultrasonic and chassis; test safe stopping and turning; invalid readings stop</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Bluetooth/Wi-Fi RC car</td>
+<td>ESP32 and smartphone control; validate command and stop on lost link</td>
+</tr>
+<tr>
+<td>8</td>
+<td>ESP-NOW RC car</td>
+<td>Two ESP32s, buttons/joystick, matching packets; test link timeout</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Smart irrigation</td>
+<td>Capacitive soil probe, low-voltage pump and driver; calibrate dry/wet, limit run time, keep water isolated</td>
+</tr>
+<tr>
+<td>10</td>
+<td>IoT weather station</td>
+<td>ESP32, DHT22 and OLED; publish temperature/humidity; verify dashboard and offline behaviour</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Automatic Aarti</td>
+<td>Geared motor and unlit plate; timed circular motion and stable mount</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Waving robot</td>
+<td>Hand/neck servos, proximity trigger; verify endpoints, sequence and power</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Zensin mechanism</td>
+<td>Undefined in source; require drawing, purpose and motion description before design or code</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Password door lock</td>
+<td>Keypad, controller, servo model lock; validate entries, incorrect codes and timeout; not a real security system</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Railway gate model</td>
+<td>Two train sensors, warning LEDs, servo barrier and state logic; simulated model only, never real railway operation</td>
+</tr>
+</tbody>
+</table></div>
+<div data-widget="projects"></div>
+</article><article id="section-5"><h2>Teaching schedule — 80 hours</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Session</th>
+<th style="text-align:right">Hours</th>
+<th>Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:right">4</td>
+<td>Robotics, applications, safety and engineering design</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:right">4</td>
+<td>Voltage, current, resistance, Ohm's law</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align:right">4</td>
+<td>Components, circuits, logic, instruments</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align:right">4</td>
+<td>Sensors and measurement</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align:right">4</td>
+<td>Actuators and introduction to motion</td>
+</tr>
+<tr>
+<td>6</td>
+<td style="text-align:right">4</td>
+<td>Torque, gears, transmission</td>
+</tr>
+<tr>
+<td>7</td>
+<td style="text-align:right">4</td>
+<td>Linkages, walking, flight and anatomy</td>
+</tr>
+<tr>
+<td>8</td>
+<td style="text-align:right">4</td>
+<td>Controllers and algorithms</td>
+</tr>
+<tr>
+<td>9</td>
+<td style="text-align:right">4</td>
+<td>IDE, variables, basic programs</td>
+</tr>
+<tr>
+<td>10</td>
+<td style="text-align:right">4</td>
+<td>Conditions, loops, arrays, functions, debugging</td>
+</tr>
+<tr>
+<td>11</td>
+<td style="text-align:right">4</td>
+<td>Digital input/output, ADC and PWM</td>
+</tr>
+<tr>
+<td>12</td>
+<td style="text-align:right">4</td>
+<td>Sensors, calibration and displays</td>
+</tr>
+<tr>
+<td>13</td>
+<td style="text-align:right">4</td>
+<td>DC motors, drivers and H-bridge</td>
+</tr>
+<tr>
+<td>14</td>
+<td style="text-align:right">4</td>
+<td>Servos, steppers and chassis</td>
+</tr>
+<tr>
+<td>15</td>
+<td style="text-align:right">4</td>
+<td>Line-following and obstacle avoidance</td>
+</tr>
+<tr>
+<td>16</td>
+<td style="text-align:right">4</td>
+<td>ESP32, Wi-Fi and Bluetooth</td>
+</tr>
+<tr>
+<td>17</td>
+<td style="text-align:right">4</td>
+<td>ESP-NOW, dashboards and security</td>
+</tr>
+<tr>
+<td>18</td>
+<td style="text-align:right">4</td>
+<td>Animatronics and multiple servos</td>
+</tr>
+<tr>
+<td>19</td>
+<td style="text-align:right">4</td>
+<td>State machines and integration</td>
+</tr>
+<tr>
+<td>20</td>
+<td style="text-align:right">4</td>
+<td>Independent project, testing and assessment</td>
+</tr>
+</tbody>
+</table></div>
+</article><article id="section-6"><h2>Assessment and viva</h2>
+<div data-widget="quiz"></div>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Stage 1 descriptive</th>
+<th>Stage 2 descriptive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Explain Ohm's law and example</td>
+<td>Explain setup and loop</td>
+</tr>
+<tr>
+<td>Series vs parallel</td>
+<td>ADC vs PWM</td>
+</tr>
+<tr>
+<td>KCL and KVL</td>
+<td>Pull-ups and debounce</td>
+</tr>
+<tr>
+<td>Resistor colours</td>
+<td>Blink LED code</td>
+</tr>
+<tr>
+<td>Transistor switching</td>
+<td>Ultrasonic calculation</td>
+</tr>
+<tr>
+<td>Capacitor charging</td>
+<td>H-bridge control</td>
+</tr>
+<tr>
+<td>DC vs servo vs stepper</td>
+<td>Differential drive</td>
+</tr>
+<tr>
+<td>Gear ratio and torque</td>
+<td>Wi-Fi vs BLE vs ESP-NOW</td>
+</tr>
+<tr>
+<td>Four-bar linkage</td>
+<td>State machines</td>
+</tr>
+<tr>
+<td>Flight forces</td>
+<td>Calibration and hysteresis</td>
+</tr>
+<tr>
+<td>Degrees of freedom</td>
+<td>Communication fail-safe</td>
+</tr>
+<tr>
+<td>MCU vs processor</td>
+<td>Troubleshoot a robot</td>
+</tr>
+</tbody>
+</table></div>
+</article><article id="section-7"><h2>Reference library</h2>
+<p>Recommended books for deeper instructor study (not reproduced): Paul Horowitz and Winfield Hill, <em>The Art of Electronics</em>; Paul Scherz and Simon Monk, <em>Practical Electronics for Inventors</em>; R. S. Khurmi and J. K. Gupta, <em>Theory of Machines</em>; Michael Margolis et al., <em>Arduino Cookbook</em>.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Link and purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenStax University Physics 1</td>
+<td><a href="https://openstax.org/details/books/university-physics-volume-1" rel="noopener noreferrer" target="_blank">Mechanics</a></td>
+</tr>
+<tr>
+<td>OpenStax University Physics 2</td>
+<td><a href="https://openstax.org/details/books/university-physics-volume-2" rel="noopener noreferrer" target="_blank">Electricity and magnetism</a></td>
+</tr>
+<tr>
+<td>All About Circuits</td>
+<td><a href="https://www.allaboutcircuits.com/textbook/" rel="noopener noreferrer" target="_blank">Electrical engineering textbook</a></td>
+</tr>
+<tr>
+<td>Lynch &amp; Park</td>
+<td><a href="https://modernrobotics.northwestern.edu/nu-gm-book-resource/" rel="noopener noreferrer" target="_blank">Modern Robotics book resources</a></td>
+</tr>
+<tr>
+<td>NASA</td>
+<td><a href="https://www.nasa.gov/stem-content/four-forces-of-flight/" rel="noopener noreferrer" target="_blank">Four Forces of Flight</a></td>
+</tr>
+<tr>
+<td>Arduino</td>
+<td><a href="https://docs.arduino.cc/" rel="noopener noreferrer" target="_blank">Hardware and tutorials</a></td>
+</tr>
+<tr>
+<td>Arduino</td>
+<td><a href="https://docs.arduino.cc/language-reference/" rel="noopener noreferrer" target="_blank">Language reference</a></td>
+</tr>
+<tr>
+<td>Arduino</td>
+<td><a href="https://docs.arduino.cc/built-in-examples/" rel="noopener noreferrer" target="_blank">Built-in examples</a></td>
+</tr>
+<tr>
+<td>Espressif</td>
+<td><a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/" rel="noopener noreferrer" target="_blank">Arduino ESP32 documentation</a></td>
+</tr>
+<tr>
+<td>Espressif</td>
+<td><a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/api/espnow.html" rel="noopener noreferrer" target="_blank">ESP-NOW API</a></td>
+</tr>
+<tr>
+<td>Raspberry Pi</td>
+<td><a href="https://www.raspberrypi.com/documentation/" rel="noopener noreferrer" target="_blank">Official documentation</a></td>
+</tr>
+<tr>
+<td>Texas Instruments</td>
+<td><a href="https://www.ti.com/product/DRV8833" rel="noopener noreferrer" target="_blank">DRV8833 datasheet</a></td>
+</tr>
+<tr>
+<td>Wokwi</td>
+<td><a href="https://wokwi.com/" rel="noopener noreferrer" target="_blank">Virtual electronics lab</a></td>
+</tr>
+<tr>
+<td>Tinkercad</td>
+<td><a href="https://www.tinkercad.com/circuits" rel="noopener noreferrer" target="_blank">Circuits simulation</a></td>
+</tr>
+</tbody>
+</table></div>
+</article><article id="section-8"><h2>Final competency checklist</h2>
+<p>Demonstrate independently before Stage 3. Your progress is saved on this browser. Completion of this checklist is not an official certification assessment.
+<div data-widget="checklist"></div></p>
+<p>Instructor note: maintain separate theory, laboratory and programming resources as the course grows. The material covers all ten modules and addresses all 33 activities; complete project-specific schematics, hardware-tested firmware and validated laboratory procedures are still required for an institutional laboratory manual.</p>
+</article><footer>TEJEEL INNOVATIONS LLP · Robotics Explorer &amp; Robotics Maker<br/>Educational simulations · Verify hardware specifications before laboratory use.</footer></main></div><script src="app.js"></script></body></html>
